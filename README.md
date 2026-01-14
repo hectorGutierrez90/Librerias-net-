@@ -8,7 +8,7 @@ dotnet watch run --launch-profile "https"
 
 dotnet watch --no-launch-profile run --launch-profile "https" --configuration Debug
 
-s
+s d
 🧠 Explicación de los flags:
 
     dotnet watch → observa los archivos y reinicia el servidor automáticamente al detectar cambios.
