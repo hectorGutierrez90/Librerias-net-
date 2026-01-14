@@ -1,0 +1,14 @@
+name: PR -> Central pipeline
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  call-central:
+    uses: hectorGutierrez90/sa-wfm-event-ingestor-svc/.github/workflows/docker-build-run.yml@main
+    with:
+      repo: ${{ github.repository }}
+      ref: ${{ github.event.pull_request.head.sha }}
+    secrets:
+      CENTRAL_TOKEN: ${{ secrets.CENTRAL_TOKEN }}
